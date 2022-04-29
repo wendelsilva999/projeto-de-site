@@ -1,11 +1,9 @@
 @charset "UTF-8";
 
 
-/*importando uma fonte externa só vai funcionar enquanto o site de onde to pegando tiver online*/
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 
-/*importando uma fonte baixada o primeiro ..barra antes do fontes foi preciso ai me deu as opções das pastas*/
 @font-face {
     font-family: 'Android';
     src: url('../fontes/idroid.otf') format('opentype');
@@ -13,21 +11,7 @@
 
 
 
-/*
-#c5ebd6
-#83e1ad
-#3ddc84
-#2fa866
-#1a5c37
-#063d1e
-*/
 
-/*tudo que eu definir ai embaixo vai servir pro doc inteiro
-posso por variavies ai dentro será tipo var globais
-
-toda variavel de css tem que começar com -- dois tracinhos, ali no background color eu apertar o ctrl e espaço vai mostrar as cor e lá embaixo vai ter essas variaveis ai com as cor de pré-defini, um exemplo de como usar isso e o q rola
-
-assim e pratico pois salvo a paleta de cor aqui e so precisaria mudar o numero pra mudar a cor facilita mexer no código*/
 :root {
     --cor0: #c5ebd6;
     --cor1: #83e1ad;
@@ -41,11 +25,13 @@ assim e pratico pois salvo a paleta de cor aqui e so precisaria mudar o numero p
     --fonte-android: 'Android', cursive;
 }
 
-/*isso e uma var global que vai afetar todos os elementos selecionados ou não aqui *{}   */
+
+
 *{
     padding: 0px;
     margin: 0px;
 }
+
 
 
 a.externo::after{
@@ -57,6 +43,8 @@ body {
     background-color: var(--cor0);
     font-family: var(--fonte-padrao);
 }
+
+
 
 header{
     background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
@@ -86,6 +74,8 @@ header > p {
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.486);
 }
 
+
+
 nav {
     text-align: left;
     background-color: var(--cor5);
@@ -99,7 +89,7 @@ nav> a {
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
-    transition-duration: 0.5s; /*o que isso faz? da tipo um atrasadinha meio que ainda fica acesso onde eu passei o mouse antes de colocar ele em outra posição massa */
+    transition-duration: 0.5s;
 }
 
 nav> a:hover{
@@ -145,9 +135,7 @@ main > article > img#bugdroid {
 }
 
 
-/* a falta desse > e pra dizer q mexa em qualquer p dentro do main em qualquer nivel se eu especificasse tipo main>abobora> p ai mexe so no p dentro de abobora dentro d main  o indent pra da aquela margen no inicio do paragrafo
 
-o espaço nas linhas e pra facilitar a leitura muito junto pode fazer vc se perder */
 main p{
     margin: 15px 0px;
     text-align: justify;
@@ -176,15 +164,15 @@ main a:hover {
 }
 
 
-/*as bolinhas da lista ficaram pra fora do bloco pintado pra ficarem dentro também temos que configurar*/
+
 aside{
     background-color: var(--cor1);
     padding: 10px;
     border-radius: 10px;
     box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.404);
 }
-/*cara muito facil fazer coluna dupla...
-\00A0 adciona espaço em branco ali onde coloquei, lmebrar do \ que e preciso*/
+
+
 aside > ul {
     list-style-type: '\2714\00A0\00A0';
     list-style-position: inside;
@@ -199,8 +187,8 @@ aside > h3{
     border-radius: 10px 10px 0px 0px;
 }
 
-/*quando eu reproduzo video ele fica com faixas preta lateral e mexendo no padding bottom posso ir miminuindo elas, PRESTAR MUIA ATENÇÃO!!!
-ate porque bootm e pra baixo mas ajeito o lado tentar resolver/descobrir como isso funciona*/
+
+
 div.video{
     background-color: var(--cor5);
     margin: 0px -20px 30px -20px;
@@ -209,7 +197,8 @@ div.video{
     position: relative;
 }
 
-/*pra poder manipular o video do yt top e left vai mover o video pra ajustar na caixinha que montei pra ele*/
+
+
 div.video > iframe {
     position: absolute;
     top: 5%;
